@@ -1,0 +1,75 @@
+body {
+    cursor: none;
+}
+
+.mouse-cursor {
+    display: none;
+    position: fixed;
+    top: -8px;
+    left: -8px;
+    width: 16px;
+    height: 16px;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.mouse-ring {
+    display: none;
+    position: fixed;
+    top: -5vh;
+    left: -5vh;
+    width: 10vh;
+    height: 10vh;
+    opacity: .5;
+    -webkit-transition: .8s cubic-bezier(.05,.8,.4,1);
+    transition: .8s cubic-bezier(.05,.8,.4,1);
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.mouse-cursor::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #FFF;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, .5);
+    -webkit-transform: scale(.5);
+    transform: scale(.5);
+    -webkit-transition: .2s linear;
+    transition: .2s linear;
+}
+
+.mouse-ring::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border: thin solid #FFF;
+    border-radius: 50%;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .2s linear;
+    transition: .2s linear;
+}
+
+.mouse-cursor-hover::before {
+    background: hsla(0, 0%, 100%, .3);
+    border-color: #fff;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s linear;
+    transition: .3s linear;
+}
+
+@media (min-width: 576px) {
+    .mouse-cursor, .mouse-ring {
+        display: block;
+    }
+}

@@ -1,0 +1,114 @@
+{
+    "parser": "babel-eslint",
+    "env": {
+        "browser": true,
+        "es6": true,
+        "jest": true
+    },
+    "extends": "airbnb",
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+        "radix": "off",
+        "semi": [
+            "error",
+            "always"
+        ],
+        "arrow-parens": [
+            "warn",
+            "as-needed"
+        ],
+        "max-len": [
+            "warn",
+            120
+        ],
+        "indent": [
+            "error",
+            4,
+            {
+                "SwitchCase": 1
+            }
+        ],
+        "padded-blocks": [
+            "error",
+            {
+                "classes": "always"
+            }
+        ],
+        "no-console": [
+            "warn",
+            {
+                "allow": [
+                    "warn"
+                ]
+            }
+        ],
+        "comma-dangle": [
+            "error",
+            "always-multiline",
+            {
+                "functions": "ignore"
+            }
+        ],
+        "jsx-a11y/anchor-is-valid": [
+            "error",
+            {
+                "components": [
+                    "Link"
+                ],
+                "specialLink": [
+                    "to",
+                    "hrefLeft",
+                    "hrefRight"
+                ],
+                "aspects": [
+                    "noHref",
+                    "invalidHref",
+                    "preferButton"
+                ]
+            }
+        ],
+        "react/jsx-indent": [
+            "error",
+            4
+        ],
+        "react/jsx-indent-props": [
+            "error",
+            4
+        ],
+        "react/forbid-prop-types": [
+            "error",
+            {
+                "forbid": [
+                    "any"
+                ]
+            }
+        ],
+        "react/jsx-filename-extension": [
+            1,
+            {
+                "extensions": [
+                    ".js",
+                    ".jsx"
+                ]
+            }
+        ],
+        "import/no-named-as-default": 0,
+        "react/prop-types":
+        [
+            2, { "ignore": ["children"] }
+        ]
+    }
+}
