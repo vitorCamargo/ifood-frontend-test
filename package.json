@@ -6,6 +6,11 @@
   "repository": "https://github.com/vitorCamargo/v-spotifood.git",
   "author": "Vitor Bueno de Camargo <vitorcamargo@alunos.utfpr.edu.br>",
   "license": "MIT",
+  "homepage": "http://vitorcamargo.github.io/v-spotifood",
+  "routes": {
+    "/**": "index.html"
+  },
+  "root": "build/",
   "scripts": {
     "clean": "rimraf dist",
     "build": "webpack --config webpack.config.js",
