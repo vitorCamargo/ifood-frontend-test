@@ -5,12 +5,12 @@ cache:
   directories:
   - node_modules
 script:
-  - npm run dist
+  - yarn dist
 
 deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
-  local_dir: gh-pages
+  local_dir: build
   on:
     branch: master
